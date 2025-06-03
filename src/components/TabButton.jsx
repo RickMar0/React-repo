@@ -1,12 +1,9 @@
 import { Children } from "react";
 
-export default function TabButton({children, onSelect}) {
-  function handleClick() {
-    console.log(`Hello World!`);
-  }
+export default function TabButton({children, onSelect, isSelected}) {
   return (
     <li>
-      <button onClick={ onSelect }>
+      <button className={isSelected ? "active" : undefined} onClick={ onSelect }>
         {children}
       </button>
     </li>
